@@ -31,6 +31,18 @@ export const Container = styled.div`
   border-color: white;
 }
 
+@media (max-width: 600px) {
+  .avatar img {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: solid 1px;
+    border-color: white;
+}
+}
+
 .comment-text {
   display: flex;
   flex-direction: column;

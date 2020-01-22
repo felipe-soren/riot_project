@@ -40,7 +40,7 @@ export const Container = styled.div`
         display: grid;
         grid-gap: 10px;
         grid-template-columns: 40% 30% 30%;
-        grid-template-rows: 180px 20vh 20vh;
+        grid-template-rows: 180px auto auto;
         grid-template-areas:
           "header  header  header"
           "sidebar content content"
