@@ -58,7 +58,6 @@ export const Container = styled.div`
   }
 }
 
-
 .box {
   border-radius: 5px;
   font-size: 150%;

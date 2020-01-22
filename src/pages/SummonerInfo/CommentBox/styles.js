@@ -33,7 +33,7 @@ export const Container = styled.div`
     cursor: pointer;
 
     &:hover{
-      background: #52d89f
+      background: #8277B7
     }
   }
 `;
