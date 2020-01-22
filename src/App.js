@@ -1,19 +1,20 @@
 import React from 'react';
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
+import Routes from './Routes'
 
 import GlobalStyle from './styles/global';
-import Grid from './Grid';
 
-function App() {
-  return (
+class App extends React.Component {
+  render() {
+    return(
     <>
     <GlobalStyle />
     <Header />
-    <Grid />
-    <Footer />
+    <Routes />
     </>
-  );
+    )
+  }
 }
 
 export default App;
