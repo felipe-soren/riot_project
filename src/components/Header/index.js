@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import { Container } from './styles'
 
 export default function Header() {
   return(
   <Container>
-    <h1>Riot API</h1>
+    <a href="/app">Riot API</a>
   </Container>
   );
 }

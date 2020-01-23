@@ -61,7 +61,10 @@ export default class SummonerInfo extends Component {
               </div>
               <div className="box content">
                 <CommentBox summonerInfo={this.state.summonerInfo} />
-                <h1 style={{ fontSize: `25px` }}>Comentários:</h1>
+                {console.log(this.state.comments.length)}
+                {(this.state.comments.length === 0) ? (
+                  null
+                ) : (<h1 style={{ fontSize: `25px` }}>Comentários:</h1>)}
                 <div className="comment-box">
                   {this.state.comments.map(comment => (
                     <Comment comment={comment} />

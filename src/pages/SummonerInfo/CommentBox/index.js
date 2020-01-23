@@ -42,7 +42,7 @@ export default class CommentBox extends Component {
           <span className="exit" onClick={this.loggof}>Sair</span>
           </div>
         ) : (null)}
-        <textarea className="message" rows="3" 
+        <textarea className="message" rows="4" 
         placeholder="Como foi a experiência com esse jogador?"
         onChange={e => this.setState({commentInput: e.target.value})}>
         </textarea>
@@ -50,7 +50,7 @@ export default class CommentBox extends Component {
           <button>ENVIAR</button>
         ) : (
           <FacebookLogin
-          appId="2244642185826213" //APP ID NOT CREATED YET
+          appId="2244642185826213"
           fields="name,email,picture"
           callback={this.responseFacebook}
           isSdkLoaded ={console.log('carregado')}

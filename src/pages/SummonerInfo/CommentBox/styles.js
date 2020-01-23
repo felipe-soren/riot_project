@@ -17,7 +17,9 @@ export const Container = styled.div`
   border-radius: 5px;
   border-style: none;
   resize: none;
-  font-size: 20px;
+  font-family: roboto;
+  font-size: 18px;
+    color: #444;
 }
 
 .logged {
