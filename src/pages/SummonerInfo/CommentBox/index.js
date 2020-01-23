@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Api from '../../../service/riot_api_backend'
+import { mainApi } from '../../../service/riot_api_backend'
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { Container } from './styles';
 
@@ -17,7 +17,7 @@ export default class CommentBox extends Component {
   
   sendComment = async (e) => {
     e.preventDefault()
-    await Api.post(`/comment`, {
+    await mainApi.post(`/comment`, {
       userName: localStorage.getItem("name"),
       content: this.state.commentInput,
       avatarUrl: localStorage.getItem("picture"),

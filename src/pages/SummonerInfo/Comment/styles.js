@@ -10,14 +10,16 @@ export const Container = styled.div`
   border-radius: 10px;
   border-style: none;
   resize: none;
+  border:0.5px solid #c4c4c4;
 }
 
 .avatar {
+  margin-left: 1px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   background: white;
-  height: 100%;
+  height: 90%;
   width: 25%;
 }
 
@@ -33,9 +35,9 @@ export const Container = styled.div`
 
 @media (max-width: 600px) {
   .avatar img {
-    margin-top: 20px;
-    width: 50px;
-    height: 50px;
+    margin-top: 23px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
     object-fit: cover;
     border: solid 1px;

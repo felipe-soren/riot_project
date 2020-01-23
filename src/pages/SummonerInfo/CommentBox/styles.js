@@ -19,7 +19,11 @@ export const Container = styled.div`
   resize: none;
   font-family: roboto;
   font-size: 18px;
-    color: #444;
+  color: #444;
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px #8277B7;
+}
 }
 
 .logged {

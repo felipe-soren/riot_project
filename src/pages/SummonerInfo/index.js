@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SummonerCard from './SummonerCard'
 import Comment from './Comment'
-import Api from '../../service/riot_api_backend'
+import { mainApi } from '../../service/riot_api_backend'
 import CommentBox from './CommentBox'
 import ReactLoading from 'react-loading';
 
@@ -18,7 +18,7 @@ export default class SummonerInfo extends Component {
   }
 
   async componentDidMount() {
-    const response = await Api.get(`summoner/${this.props.location.state.summonerName}`)
+    const response = await mainApi.get(`summoner/${this.props.location.state.summonerName}`)
     await this.setState({ summonerInfo: response.data })
     let { summonerInfo } = this.state
     summonerInfo = Object.keys(summonerInfo).map(function(_) { return summonerInfo[_]; }) 
@@ -29,7 +29,7 @@ export default class SummonerInfo extends Component {
         await this.setState({ flexInfo: rankInfo})
       }
     })
-    const commentsResponse = await Api.get(`/comment/${response.data.summonerId}`)
+    const commentsResponse = await mainApi.get(`/comment/${response.data.summonerId}`)
     await this.setState({ comments: commentsResponse.data })
     this.setState({ isLoading: false })
     console.log(this.state.comments)
