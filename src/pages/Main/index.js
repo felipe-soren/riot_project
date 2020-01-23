@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Container, Form } from './styles';
 
+
 export default class Main extends Component {
   state = {
     summonerInput: "",

@@ -20,6 +20,22 @@ export const Container = styled.div`
   font-size: 20px;
 }
 
+.logged {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-logged {
+  font-size: 18px;
+}
+
+.exit {
+  font-size: 18px;
+  color: blue;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
   button {
     margin-top: 10px;
     height: 48px;

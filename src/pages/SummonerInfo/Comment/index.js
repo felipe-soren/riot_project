@@ -10,7 +10,7 @@ export default class Comment extends Component {
         <div className="comment">
           <div className="avatar">
             <img
-              src="https://greendestinations.org/wp-content/uploads/2019/05/avatar-exemple.jpg"
+              src={comment.avatarUrl}
               alt="avatar"
             />
           </div>
