@@ -11,6 +11,12 @@ export const Container = styled.div`
   border-style: none;
   resize: none;
   border:0.5px solid #c4c4c4;
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  height: auto;
+  margin-bottom: 5px;
 }
 
 .avatar {
@@ -52,6 +58,8 @@ export const Container = styled.div`
   font-family: roboto;
   font-size: 16px;
   display: flex;
+  width: 100%;
+  word-break:break-all;
 }
 
 .comment-text .name{

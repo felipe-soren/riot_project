@@ -43,6 +43,7 @@ export default class CommentBox extends Component {
           </div>
         ) : (null)}
         <textarea className="message" rows="4" 
+        maxLength = "180"
         placeholder="Como foi a experiência com esse jogador?"
         onChange={e => this.setState({commentInput: e.target.value})}>
         </textarea>
