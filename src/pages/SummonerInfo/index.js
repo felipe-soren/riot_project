@@ -18,7 +18,7 @@ export default class SummonerInfo extends Component {
   }
 
   async componentDidMount() {
-    const response = await mainApi.get(`summoner/${this.props.location.state.summonerName}`)
+    const response = await mainApi.get(`summoner/${this.props.match.params.name}`)
     await this.setState({ summonerInfo: response.data })
     let { summonerInfo } = this.state
     summonerInfo = Object.keys(summonerInfo).map(function(_) { return summonerInfo[_]; }) 
@@ -67,7 +67,7 @@ export default class SummonerInfo extends Component {
                 ) : (<h1 style={{ fontSize: `25px` }}>Comentários:</h1>)}
                 <div className="comment-box">
                   {this.state.comments.map(comment => (
-                    <Comment comment={comment} />
+                    <Comment comment={comment} key={comment._id}/>
                   ))}
                 </div>
               </div>

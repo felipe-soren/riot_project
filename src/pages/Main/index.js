@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { riotApi, API_KEY } from '../../service/riot_api_backend'
+import { mainApi } from '../../service/riot_api_backend'
 
 import { Container, Form } from './styles';
 
@@ -14,7 +14,7 @@ export default class Main extends Component {
     e.preventDefault()
     console.log(this.state.summonerInput)
     try {
-      await riotApi.get(`/summoner/v4/summoners/by-name/${this.state.summonerInput}?api_key=${API_KEY}`)
+      await mainApi.get(`/summonercheck/${this.state.summonerInput}`)
       this.props.history.push({ pathname: `/summoner/${this.state.summonerInput}`,
       state: { summonerName: this.state.summonerInput } });
     } catch (error) {
