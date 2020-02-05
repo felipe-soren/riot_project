@@ -31,7 +31,7 @@ export default class ranking extends Component {
                   #{index+1}
                 </td>
                 <td className="select_summoner ranking-table__cell ranking-table__cell--summoner">
-                  <a href="//br.op.gg/summoner/userName=Nick+link">
+                  <a href={`summoner/${position.summonerName}`} > 
                     <img
                       alt="summoner"
                       src={`http://avatar.leagueoflegends.com/br/${position.summonerName}.png`}
