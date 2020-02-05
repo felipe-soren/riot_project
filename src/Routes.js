@@ -10,7 +10,7 @@ const Routes = () => (
     <Switch>
       <Route path="/app" component={Main} />
       <Route path="/summoner/:name" component={SummonerInfo} />
-      <Route exact path="/" component= {() => (<Redirect to={{ pathname: "/App" }} />) }/>
+      <Route exact path="/" component= {() => (<Redirect to={{ pathname: "/app" }} />) }/>
       <Route path="*" component={() => <h1>Page not found</h1>} />
       <Route exact path="/event/:name" component={SummonerInfo} />
     </Switch>

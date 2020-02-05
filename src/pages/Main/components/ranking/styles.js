@@ -5,7 +5,7 @@ export const Container = styled.div`
   margin-bottom: 50px;
   
   @media (max-width: 600px) {
-   width: 90%
+   width: 70%
 }
   
   .ranking-table {

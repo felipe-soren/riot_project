@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { mainApi } from '../../../service/riot_api_backend'
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { Container } from './styles';
 
 export default class CommentBox extends Component {
@@ -18,9 +17,9 @@ export default class CommentBox extends Component {
   sendComment = async (e) => {
     e.preventDefault()
     await mainApi.post(`/comment`, {
-      userName: localStorage.getItem("name"),
+      userName: `Nome ${Math.floor(Math.random() * 100)}`,
       content: this.state.commentInput,
-      avatarUrl: localStorage.getItem("picture"),
+      avatarUrl: `https://api.adorable.io/avatars/190/abott@${Math.random()}.png`,
       summonerId: this.props.summonerInfo.summonerId
     })
     window.location.reload();
@@ -36,30 +35,12 @@ export default class CommentBox extends Component {
     return (
       <Container>
         <form className="fr" onSubmit={this.sendComment}>
-        {(localStorage.getItem("name")) ? (
-          <div className="logged">
-          <span className="user-logged">Você está logado como: {localStorage.getItem("name")}</span>
-          <span className="exit" onClick={this.loggof}>Sair</span>
-          </div>
-        ) : (null)}
         <textarea className="message" rows="4" 
         maxLength = "180"
         placeholder="Como foi a experiência com esse jogador?"
         onChange={e => this.setState({commentInput: e.target.value})}>
         </textarea>
-        {(localStorage.getItem("name")) ? (
           <button>ENVIAR</button>
-        ) : (
-          <FacebookLogin
-          appId="2244642185826213"
-          fields="name,email,picture"
-          callback={this.responseFacebook}
-          isSdkLoaded ={console.log('carregado')}
-          render={renderProps => (
-            <button onClick={renderProps.onClick}>ENVIAR</button>
-          )}
-          />
-        )}
         </form>
       </Container>  
     )
