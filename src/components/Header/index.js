@@ -5,7 +5,7 @@ import { Container } from './styles'
 export default function Header() {
   return(
   <Container>
-    <a href="/app">Riot API</a>
+    <a href="/app">bardo.gg</a>
   </Container>
   );
 }

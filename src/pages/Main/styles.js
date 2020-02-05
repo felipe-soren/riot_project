@@ -11,6 +11,40 @@ export const Container = styled.div`
     max-width:200px;
     height:auto;
   }
+  .Menu {
+    position: relative;
+    margin: 0 0 17px;
+    border-bottom: 1px solid #d7dada;
+}
+
+.MenuList li:not(:first-child) {
+  margin-left: 50px;
+}
+
+dl, dt, dd, ol, ul, li {
+    margin-top: 15px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+li.Item.active .Link{
+  font-weight: bold;
+}
+
+.Menu>.MenuList>.Item .Link {
+    display: block;
+    color: #555e5e;
+    font-size: 28px;
+    line-height: 32px;
+    text-decoration: none;
+    letter-spacing: -1px;
+    padding-bottom: 17px;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
 `;
 
 export const Form = styled.form`
