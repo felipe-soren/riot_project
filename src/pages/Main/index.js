@@ -67,14 +67,14 @@ export default class Main extends Component {
               <ol className="MenuList">
                 <li className="Item active">
                   <a href="/" className="Link">
-                    Classificações
+                    Ranking
                   </a>
                 </li>
-                <li className="Item ">
-                  <a href="/" className="Link">
+                {/* <li className="Item ">
+                  <a href="/" className="Link" onClick={this.handleClick}>
                     Popularidade
                   </a>
-                </li>
+                </li> */}
               </ol>
             </div>
             <Ranking ranking={this.state.ranking} />
