@@ -25,17 +25,16 @@ export default class ranking extends Component {
           </thead>
           <tbody>
             {this.props.ranking.map((position, index) => (
-              
               <tr className="ranking-table__row ">
                 <td className="ranking-table__cell ranking-table__cell--rank">
-                  #{index+1}
+                  #{index + 1}
                 </td>
                 <td className="select_summoner ranking-table__cell ranking-table__cell--summoner">
-                  <a href={`summoner/${position.summonerName}`} > 
-                    <img
+                  <a href={`summoner/${position.summonerName}`}>
+                    {/* <img
                       alt="summoner"
                       src={`http://avatar.leagueoflegends.com/br/${position.summonerName}.png`}
-                    />
+                    /> */}
                     <span>{position.summonerName}</span>
                   </a>
                 </td>
@@ -46,11 +45,10 @@ export default class ranking extends Component {
                   {position.leaguePoints} LP
                 </td>
                 <td className="ranking-table__cell ranking-table__cell--winratio">
-                {` ${(
-                (position.wins /
-                  (position.wins + position.losses)) *
-                100
-              ).toPrecision(2)}%`}
+                  {` ${(
+                    (position.wins / (position.wins + position.losses)) *
+                    100
+                  ).toPrecision(2)}%`}
                 </td>
               </tr>
             ))}
